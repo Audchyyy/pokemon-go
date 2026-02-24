@@ -11,3 +11,10 @@ def index():
   return render_template('core/index.html',
                   title='Home Page',
                   pokemons=pokemons)
+
+@core_bp.route('/detail/<int:id>')
+def detail(id):
+  pokemon = db.session.get(Pokemon, id)
+  return render_template('core/pokemon_detail.html',
+                        title='Pokemon Detail Page',
+                        pokemon=pokemon)
