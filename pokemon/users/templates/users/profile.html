@@ -30,12 +30,17 @@
             <label for="lastname" class="form-label">Lastname</label>
             <input name="lastname" value="{{user.lastname}}" type="text" class="form-control" id="lastname">
           </div>
-          
           <hr>
           <div class="col-12">
             <button type="submit" class="btn btn-outline-secondary">
               <i class="bi bi-person-square"></i>
               Update Profile</button>
+          </div>
+          <div class="col-12">
+            <a href="{{ url_for('users.change_password') }}" class="btn btn-outline-secondary">
+              <i class="bi bi-key"></i>
+              Change Password
+            </a>   
           </div>
         </form>
       </div>
